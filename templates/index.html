@@ -5,6 +5,38 @@
     <link rel="stylesheet"  href="css/styles.css">
     <link rel="stylesheet"  href="style.css">    
 </head>
+<!-- SERVICES SECTION -->
+<section id="services" style="padding: 50px; text-align: center; background: #f4f4f4;">
+    <h2>Our Services</h2>
+    <div style="display: flex; justify-content: space-around; flex-wrap: wrap;">
+        <div style="width: 300px; padding: 20px; border: 1px solid #ddd; background: white; margin: 10px;">
+            <h3>Web Design</h3>
+            <p>We create beautiful, responsive websites for 2025 and beyond.</p>
+        </div>
+        <div style="width: 300px; padding: 20px; border: 1px solid #ddd; background: white; margin: 10px;">
+            <h3>Development</h3>
+            <!-- CONTACT SECTION -->
+<section id="contact" style="padding: 50px; text-align: center;">
+    <h2>Contact Us</h2>
+    <p>Email: info@example.com</p>
+    <p>Lagos, Nigeria</p>
+    <form style="display: flex; flex-direction: column; max-width: 400px; margin: auto;">
+        <input type="text" placeholder="Your Name" style="margin-bottom: 10px; padding: 10px;">
+        <input type="email" placeholder="Your Email" style="margin-bottom: 10px; padding: 10px;">
+        <textarea placeholder="Your Message" style="margin-bottom: 10px; padding: 10px; height: 100px;"></textarea>
+        <button type="submit" style="padding: 10px; background: blue; color: white; border: none; cursor: pointer;">Send Message</button>
+    </form>
+</section>
+Use code with caution.
+
+3. Link your Menu to these sections
+Make sure your navigation menu at the top of the file uses "hashtags" to jump to these sections:
+html
+<nav>
+    <a href="#">Home</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+</nav>
 <body>
   <header>
     <input id="business-name" type="text" value="Sarah's Laundry App">
@@ -13,7 +45,12 @@
     <button id="update-color-btn">Update Color</button>
     <button id="update-logo-btn">Update Logo</button>
     <img id="logo" src="default-logo.png" alt="Logo">
-
+<nav>
+    <a href="#">Home</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+</nav>
+<button id="theme-toggle" class="toggle-btn" aria-label="Toggle Dark Mode">🌙</button>
 <section id="Services">
   <h2>Our Services</h2>
   <table>
@@ -69,6 +106,173 @@
         <li>Drying</li>
         <li>Folding</li>
       </ul>
+      <section class="bento-container">
+  <div class="bento-grid">
+    <!-- Large Feature Box -->
+    <div class="bento-item wide">
+      <h3>Main Project</h3>
+      <p>A classic showcase of your primary work.</p>
+      <div class="bento-tag">Featured</div>
+    </div>
+
+    <!-- Small Square -->
+    <div class="bento-item">
+      <h3>Design</h3>
+      <p>Clean aesthetics.</p>
+    </div>
+
+    <!-- Small Square -->
+    <div class="bento-item">
+      <h3>Strategy</h3>
+      <p>Unique vision.</p>
+    </div>
+
+    <!-- Tall Feature Box -->
+    <div class="bento-item tall">
+      <h3>Growth</h3>
+      <p>Scalable solutions for 2025 and beyond.</p>
+    </div>
+
+    <!-- Medium Box -->
+    <div class="bento-item medium">
+      <h3>Launch</h3>
+      <p>Live on GitHub today.</p>
+      <div class="bento-item wide" style="background-image: url('YOUR_IMAGE_URL_HERE');">
+  <h3>Featured Project</h3>
+  <p>Description goes here.</p>
+</div>
+<div class="bento-grid">
+  <!-- Image 1: Main Feature -->
+  <div class="bento-item wide" style="background-image: url('images.unsplash.com');">
+    <h3>Modern Architecture</h3>
+    <p>Building for the future.</p>
+  </div>
+
+  <!-- Image 2: Square -->
+  <div class="bento-item" style="background-image: url('images.unsplash.com');">
+    <h3>The Office</h3>
+  </div>
+
+  <!-- Image 3: Square -->
+  <div class="bento-item" style="background-image: url('images.unsplash.com');">
+    <h3>Strategy</h3>
+  </div><div class="bento-grid">
+  <!-- Image 1: Main Feature -->
+  <div class="bento-item wide" style="background-image: url('images.unsplash.com');">
+    <h3>Modern Architecture</h3>
+    <p>Building for the future.</p>
+  </div>
+
+  <!-- Image 2: Square -->
+  <div class="bento-item" style="background-image: url('images.unsplash.com');">
+    <h3>The Office</h3>
+  </div>
+
+  <!-- Image 3: Square -->
+  <div class="bento-item" style="background-image: url('images.unsplash.com');">
+    <h3>Strategy</h3>
+  </div>
+</div>
+<div class="bento-grid">
+  <!-- Image 1: Main Feature -->
+  <div class="bento-item wide" style="background-image: url('images.unsplash.com');">
+    <h3>Modern Architecture</h3>
+    <p>Building for the future.</p>
+  </div>
+
+  <!-- Image 2: Square -->
+  <div class="bento-item" style="background-image: url('images.unsplash.com');">
+    <h3>The Office</h3>
+  </div>
+
+  <!-- Image 3: Square -->
+  <div class="bento-item" style="background-image: url('images.unsplash.com');">
+    <h3>Strategy</h3>
+  </div>
+</div>
+Use code with caution.
+
+2. The "Classic" CSS Polish
+Paste this into your CSS. It adds a dark gradient overlay (so your white text pops) and a smooth grayscale effect that turns into color when you hover.
+css
+.bento-item {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  filter: grayscale(100%); /* The "Classic" look */
+  transition: all 0.5s ease;
+  color: white;
+}
+
+/* The Overlay: Makes text readable on any image */
+.bento-item::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 100%);
+  z-index: 1;
+}
+
+/* When you hover: Image turns to color and zooms slightly */
+.bento-item:hover {
+  filter: grayscale(0%);
+  transform: scale(1.02);
+  border-color: rgba(255,255,255,0.5);
+}
+
+/* Keep text on top of the overlay */
+.bento-item h3, .bento-item p {
+  position: relative;
+  z-index: 2;
+  margin: 0;
+}
+Use code with caution.
+
+3. Final Launch Steps for Images
+Compress: Before pushing to GitHub, use TinyPNG to compress your images. This makes your site load instantly, which is "classic" professional behavior.
+Alt Text: For the best SEO in 2025, add aria-label to your bento items so Google knows what the images are.
+Check Dark Mode: Since these images have dark overlays, they will look incredible when you toggle your Dark Mode switch!
+How does it look with the images? If the "Classic" vibe is hitting, we can do one last thing: The Custom Footer to make the site feel like a complete project. Ready?
+
+
+
+ok
+To wrap up your launch today, December 25, 2025, let's build a Classic Minimalist Footer. A high-end site never just "ends" abruptly; a footer acts as the anchor that makes the whole project feel expensive and "finished."
+1. The HTML (Classic & Unique Structure)
+Paste this at the very bottom of your HTML, right before the closing </body> tag.
+html
+<footer class="classic-footer">
+  <div class="footer-content">
+    <div class="footer-logo">
+      <h2>YOUR NAME<span>.</span></h2>
+      <p>Building unique digital experiences.</p>
+    </div>
+    
+    <div class="footer-links">
+      <div class="link-group">
+        <h4>Navigation</h4>
+        <a href="#home">Home</a>
+        <a href="#bento">Work</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="link-group">
+        <h4>Social</h4>
+        <a href="#">LinkedIn</a>
+        <a href="#">GitHub</a>
+        <a href="#">X / Twitter</a>
+      </div>
+    </div>
+  </div>
+  
+  <div class="footer-bottom">
+    <p>&copy; 2025 — Launched on GitHub</p>
+    <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="back-to-top">↑</button>
+  </div>
+</footer>
+</div>
+    </div>
     </section>
     <section>
       <h2>Contact</h2>
@@ -84,5 +288,29 @@
     </ul>
   </nav>     
   <script src="script.js"></script>
+  
+    
+    <script>
+      // Wait for the DOM to fully load
+      document.addEventListener('DOMContentLoaded', () => {
+        const themeToggle = document.getElementById('theme-toggle');
+        const body = document.body;
+
+        if (!themeToggle) return; // Safety check to prevent errors
+
+        // Load saved preference
+        if (localStorage.getItem('theme') === 'dark') {
+          body.classList.add('dark-mode');
+          themeToggle.textContent = '☀️';
+        }
+
+        themeToggle.addEventListener('click', () => {
+          body.classList.toggle('dark-mode');
+          const isDark = body.classList.contains('dark-mode');
+          localStorage.setItem('theme', isDark ? 'dark' : 'light');
+          themeToggle.textContent = isDark ? '☀️' : '🌙';
+        });
+      });
+    </script>
 </body>
 </html>
