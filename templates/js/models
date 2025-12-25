@@ -1,0 +1,23 @@
+//models/Order.js
+const { client } = require('../db');
+
+const ordersCollection = client.db('mydatabase').collection('orders');
+
+async function createOrder(orderData) {
+  const result = await ordersCollection.insertOne(orderData);
+  return result.insertedID;
+}
+
+async function readOrders() {
+  return await ordersCollection.find().toArray();
+}
+
+async function updateOrder(id, newData) {
+  await ordersCollection.updateOne({ _id: id }, { $set: newData});
+}
+
+async function deleteOrder(id) {
+  await ordersCollection.deleteOne({ _id: id });  
+}
+
+Module.exports = { createOrder, readOrders, updateOrder, deleteOrder};
