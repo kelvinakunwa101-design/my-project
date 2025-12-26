@@ -7,6 +7,35 @@ async function placeOrder() {
         email: "customer@example.com", 
         order: "2 Bags of Laundry - Wash & Fold" 
     };
+
+    const textElement = document.getElementById('typing-text');
+const phrases = ['a Software Engineer.', 'a Web Developer.', 'a Problem Solver.'];
+let i = 0, j = 0;
+
+function type() {
+  if (i < phrases.length) {
+    if (j < phrases[i].length) {
+      textElement.innerHTML += phrases[i].charAt(j);
+      j++;
+      setTimeout(type, 100);
+    } else {
+      setTimeout(erase, 2000);
+    }
+  }
+}
+
+function erase() {
+  if (j > 0) {
+    textElement.innerHTML = phrases[i].substring(0, j-1);
+    j--;
+    setTimeout(erase, 50);
+  } else {
+    i = (i + 1) % phrases.length;
+    setTimeout(type, 500);
+  }
+}
+
+type(); 
     document.getElementById('inquiry-link').addEventListener('contextmenu', function(e) {
     e.preventDefault();
     navigator.clipboard.writeText("yourname@email.com");
@@ -32,9 +61,9 @@ console.log("Looking for a Software Engineer? Let's talk: kelvinakun101@gmail.co
 console.log("%c STOP! %c You found the secret console.", "color: red; font-size: 30px; font-weight: bold;", "color: #00ffc8; font-size: 15px;");
 
 async function placeOrder(event) {
-    event.preventDefault(); // Prevents the page from refreshing
+    event.preventDefault(); 
 
-    // 1. Get the data from your HTML input fields
+    
     const customerEmail = document.getElementById('email-input').value;
     const laundryService = document.getElementById('service-select').value;
 
@@ -42,12 +71,10 @@ async function placeOrder(event) {
         email: customerEmail,
         order: laundryService
     };
-    // Runs when the page loads
 window.onload = () => {
     console.log("Page loaded successfully!");
 };
-
-    // 2. Send the data to your Flask Backend
+    
     try {
         const response = await fetch('127.0.0.1', {
             method: 'POST',
@@ -149,7 +176,6 @@ updateBtn.addEventListener('click', () => {
   document.querySelector('h1').textContent = newBusinessName;
 })  
   
-// Update logo
 const logoUrlInput = document.getElementById('logo-url');
 const updateLogoBtn = document.getElementById('update-logo-btn');
 const logoImg = document.getElementById('logo');
@@ -159,7 +185,6 @@ updateLogoBtn.addEventListener('click', () => {
   logoImg.src = newLogoUrl;
 })
 
-//Update primary color
 const primaryColorInput = document.getElementById('primary-color');
 const updateColorBtn = document.getElementById('update-color-btn');
 
@@ -168,20 +193,21 @@ updateColorBtn.addEventListener('click', () => {
   document.documentElement.style.setProperty('--primary-color', newPrimaryColor);
   
 });
-// Update
 async function placeOrder(event) {
-    event.preventDefault(); // Prevents the page from refreshing
-
-    // 1. Get the data from your HTML input fields
+    event.preventDefault(); 
     const customerEmail = document.getElementById('email-input').value;
     const laundryService = document.getElementById('service-select').value;
+    const cursor = document.querySelector('.cursor');
+document.addEventListener('mousemove', (e) => {
+    cursor.style.left = e.clientX + 'px';
+    cursor.style.top = e.clientY + 'px';
+});
 
     const orderData = {
         email: customerEmail,
         order: laundryService
     };
 
-    // 2. Send the data to your Flask Backend
     try {
         const response = await fetch('127.0.0.1', {
             method: 'POST',

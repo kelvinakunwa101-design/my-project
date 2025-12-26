@@ -5,6 +5,11 @@ body {
     margin: 0;
     padding: 20px;
 }
+body {
+    background: radial-gradient(circle at top right, #1a1a2e, #16213e, #0f3460);
+    color: #e9ecef;
+    min-height: 100vh;
+}
 
 h1 {
     color: #007bff; 
@@ -47,7 +52,16 @@ body {
     font-family: 'Inter', sans-serif;
     padding-top: 120px; 
 }
-
+.cursor {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #00ffc8;
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+    transition: transform 0.1s ease;
+}
 
 .navbar {
     position: fixed;
@@ -155,14 +169,26 @@ bento-item {
     transform: translateY(-5px);
     border-color: rgba(255, 255, 255, 0.3);
 }
+.card {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 25px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+    cursor: pointer;
+}
 
-.project-box {
-    position: relative;
-    overflow: hidden;
-    min-height: 300px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
+.card:hover {
+    transform: translateY(-12px) scale(1.02);
+    border: 1px solid rgba(0, 255, 200, 0.5);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4), 0 0 20px rgba(0, 255, 200, 0.2)
+}
+
+body {
+    background: radial-gradient(circle at top right, #1a1a2e, #16213e, #0f3460);
+    color: #e9ecef;
+    min-height: 100vh;
 }
 
 
