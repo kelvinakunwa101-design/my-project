@@ -18,6 +18,31 @@
             <a href="#contact">Contact</a>
         </nav>
     </header>
+    <main class="bento-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; padding: 20px; max-width: 1200px; margin: 0 auto;">
+    
+    <!-- BIG HERO BOX -->
+    <div class="bento-item" style="grid-column: span 2; grid-row: span 2;">
+        <h1>Creative Design <br> with <em>Intention</em></h1>
+        <p style="color: #a1a1a1; margin-top: 15px;">Building digital experiences that stand the test of time.</p>
+        <a href="#contact" class="classic-btn">Work With Me</a>
+    </div>
+
+    <!-- SMALL PROJECT BOX -->
+    <div class="bento-item project-box">
+        <h3>Project One</h3>
+        <p style="font-size: 0.9rem; color: #a1a1a1;">Branding & UI</p>
+    </div>
+
+    <!-- CONTACT FORM BOX -->
+    <div class="bento-item" id="contact">
+        <h3>Inquiry</h3>
+        <form action="formspree.io" method="POST" style="margin-top: 15px;">
+            <input type="email" name="email" placeholder="Your Email" required style="width: 100%; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); padding: 10px; color: white; border-radius: 8px; margin-bottom: 10px;">
+            <button type="submit" style="width: 100%; padding: 10px; border-radius: 8px; border: none; background: white; cursor: pointer; font-weight: bold;">Send</button>
+        </form>
+    </div>
+
+</main>
 
     <main class="bento-container">
         <!-- Main Bio Box -->
@@ -87,7 +112,10 @@
 " method="POST" class="classic-form">
         <label>Your Email:</label>
         <input type="email" name="email" placeholder="kelvinakunwa101@gmail.com" required style="width:100%; margin-bottom:15px; padding:10px; border-radius:8px; border:1px solid #ddd;">
-        
+        <link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
         <label>Your Message:</label>
         <textarea name="message" placeholder="Tell me about your project..." required style="width:100%; height:100px; padding:10px; border-radius:8px; border:1px solid #ddd;"></textarea>
         
