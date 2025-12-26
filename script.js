@@ -7,6 +7,11 @@ async function placeOrder() {
         email: "customer@example.com", 
         order: "2 Bags of Laundry - Wash & Fold" 
     };
+    document.getElementById('inquiry-link').addEventListener('contextmenu', function(e) {
+    e.preventDefault();
+    navigator.clipboard.writeText("yourname@email.com");
+    alert("Email copied to clipboard!");
+});
 
     const response = await fetch('127.0.0.1', {
         method: 'POST',
