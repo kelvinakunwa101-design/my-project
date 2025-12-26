@@ -1,6 +1,56 @@
 <!DOCTYPE html>
 <html>
 <head>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kelvin Akunwa | Portfolio</title>
+    <!-- Premium Fonts -->
+    <link href="fonts.googleapis.com" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="classic-header">
+        <div class="logo">KELVIN AKUNWA</div>
+        <nav>
+            <a href="#projects">Work</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main class="bento-container">
+        <!-- Main Bio Box -->
+        <section class="bento-item main-bio">
+            <h1>Design with <br><em>Intention.</em></h1>
+            <p>Crafting high-end digital experiences through modern minimalism.</p>
+        </section>
+
+        <!-- Project Small Box -->
+        <section class="bento-item project-sm">
+            <h3>Latest Project</h3>
+            <span class="tag">Design</span>
+        </section>
+
+        <!-- Contact Box (Placeholder) -->
+        <section id="contact" class="bento-item contact-box">
+            <h3>Get in Touch</h3>
+            <p>Available for select collaborations.</p>
+            <a href="mailto:hello@yourdomain.com" class="classic-btn">Inquiry</a>
+        </section>
+    </main>
+
+    <footer class="massive-footer">
+        <div class="footer-content">
+            <p>&copy; 2025 KELVIN AKUNWA. ALL RIGHTS RESERVED.</p>
+            <div class="social-links">
+                <a href="#">LinkedIn</a>
+                <a href="#">Dribbble</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
   <title>Sarah's Laundry App</title>
     <link rel="stylesheet"  href="css/styles.css">
     <link rel="stylesheet"  href="style.css">    
@@ -190,59 +240,6 @@ html
     <h3>Strategy</h3>
   </div>
 </div>
-Use code with caution.
-
-2. The "Classic" CSS Polish
-Paste this into your CSS. It adds a dark gradient overlay (so your white text pops) and a smooth grayscale effect that turns into color when you hover.
-css
-.bento-item {
-  position: relative;
-  background-size: cover;
-  background-position: center;
-  overflow: hidden;
-  filter: grayscale(100%); /* The "Classic" look */
-  transition: all 0.5s ease;
-  color: white;
-}
-
-/* The Overlay: Makes text readable on any image */
-.bento-item::after {
-  content: "";
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 100%);
-  z-index: 1;
-}
-
-/* When you hover: Image turns to color and zooms slightly */
-.bento-item:hover {
-  filter: grayscale(0%);
-  transform: scale(1.02);
-  border-color: rgba(255,255,255,0.5);
-}
-
-/* Keep text on top of the overlay */
-.bento-item h3, .bento-item p {
-  position: relative;
-  z-index: 2;
-  margin: 0;
-}
-Use code with caution.
-
-3. Final Launch Steps for Images
-Compress: Before pushing to GitHub, use TinyPNG to compress your images. This makes your site load instantly, which is "classic" professional behavior.
-Alt Text: For the best SEO in 2025, add aria-label to your bento items so Google knows what the images are.
-Check Dark Mode: Since these images have dark overlays, they will look incredible when you toggle your Dark Mode switch!
-How does it look with the images? If the "Classic" vibe is hitting, we can do one last thing: The Custom Footer to make the site feel like a complete project. Ready?
-
-
-
-ok
-To wrap up your launch today, December 25, 2025, let's build a Classic Minimalist Footer. A high-end site never just "ends" abruptly; a footer acts as the anchor that makes the whole project feel expensive and "finished."
-1. The HTML (Classic & Unique Structure)
-Paste this at the very bottom of your HTML, right before the closing </body> tag.
-html
 <footer class="classic-footer">
   <div class="footer-content">
     <div class="footer-logo">
