@@ -147,7 +147,13 @@ bento-item {
     margin-top: 20px;
     transition: all 0.3s ease;
 }
-
+:root {
+  /* Change these to instantly rebrand for a client */
+  --brand-name: "KELVIN AKUNWA"; 
+  --client-name: "YOUR BUSINESS NAME"; 
+  --accent-color: #007aff; /* Classic Blue */
+  --bg-color: #0d0d0d;
+}
 .classic-btn:hover {
     background: #ffffff;
     transform: scale(1.05);
@@ -165,5 +171,23 @@ bento-item {
 
     h1 {
         font-size: 2.5rem; /* Prevents text from overflowing */
+    }
+}
+.project-card img {
+    transition: transform 0.5s ease;
+}
+
+.project-card:hover img {
+    transform: scale(1.05); /* Slight zoom on hover */
+    opacity: 0.9;
+}
+
+/* Mobile fix for the gallery */
+@media (max-width: 768px) {
+    .project-gallery-grid {
+        grid-template-columns: 1fr; /* Stacks projects vertically on phone */
+    }
+    .gallery-box {
+        grid-column: span 1 !important;
     }
 }
