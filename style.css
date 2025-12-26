@@ -10,6 +10,54 @@ body {
     color: #e9ecef;
     min-height: 100vh;
 }
+body {
+    background: #0d0d0d;
+    overflow-x: hidden;
+}
+
+/* The moving glow effect */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 50% 50%, rgba(0, 255, 200, 0.05), transparent 40%),
+                radial-gradient(circle at 80% 20%, rgba(0, 123, 255, 0.05), transparent 30%);
+    z-index: -1;
+    animation: pulse 10s infinite alternate;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 0.5; }
+    100% { transform: scale(1.2); opacity: 1; }
+}
+
+.tech-slider {
+    overflow: hidden;
+    padding: 20px 0;
+    background: rgba(255, 255, 255, 0.02);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.tech-track {
+    display: flex;
+    width: calc(250px * 10);
+    animation: scroll 20s linear infinite;
+}
+.tech-track span {
+    width: 250px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.3);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-250px * 5)); }
+}
 
 h1 {
     color: #007bff; 
@@ -39,6 +87,44 @@ a[href^="mailto:"]:hover {
     border-radius: 15px;
     padding: 20px;
     transition: transform 0.3s ease;
+}
+
+.card-image-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.card-image-container::after {
+    content: "";
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: #00ffc8;
+    box-shadow: 0 0 15px #00ffc8;
+    transition: 0s;
+    .status-dot {
+    height: 10px;
+    width: 10px;
+    background-color: #00ffc8;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 8px;
+    box-shadow: 0 0 10px #00ffc8;
+    animation: blink 1.5s infinite;
+}
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0.3; }
+    100% { opacity: 1; }
+}
+}
+
+.card:hover .card-image-container::after {
+    top: 100%;
+    transition: 0.8s;
 }
 * {
     margin: 0;
