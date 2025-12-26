@@ -76,7 +76,45 @@ p {
     padding: 40px;
     transition: transform 0.3s ease;
 }
+bento-item {
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
 
+.bento-item:hover {
+    transform: translateY(-8px) scale(1.01);
+    border-color: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+/* SKILL PILLS STYLING */
+.skill-pill {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 8px 16px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    color: #f0f0f0;
+    transition: all 0.3s ease;
+}
+
+.skills-container:hover .skill-pill {
+    border-color: rgba(0, 122, 255, 0.4); /* Glow blue on hover */
+    background: rgba(0, 122, 255, 0.05);
+}
+
+.skill-pill:hover {
+    background: #ffffff !important;
+    color: #000000 !important;
+    transform: translateY(-3px);
+}
+
+.bento-item {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(12px); /* Creates the frosted glass look */
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 30px; /* Softer, rounder corners are more "pro" */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
 .bento-item:hover {
     transform: translateY(-5px);
     border-color: rgba(255, 255, 255, 0.3);
@@ -113,4 +151,19 @@ p {
 .classic-btn:hover {
     background: #ffffff;
     transform: scale(1.05);
+}
+@media (max-width: 768px) {
+    .bento-grid {
+        grid-template-columns: 1fr !important; /* Forces one column on mobile */
+        padding: 15px;
+    }
+    
+    .bento-item {
+        grid-column: span 1 !important; /* Resets the "Big Hero" box for small screens */
+        padding: 30px;
+    }
+
+    h1 {
+        font-size: 2.5rem; /* Prevents text from overflowing */
+    }
 }
