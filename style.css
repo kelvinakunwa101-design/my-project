@@ -1,4 +1,27 @@
-/* CLASSIC 2025 RESET */
+body {
+    background-color: #f4f4f4; /* Light gray background */
+    color: #333; /* Dark text color */
+    font-family: sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    color: #007bff; /* Blue heading */
+}/* Custom Scrollbar - Put this at the top of your CSS */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #1a1a1a; }
+::-webkit-scrollbar-thumb { background: #00ffc8; border-radius: 10px; }
+
+/* Frosted Glass Effect - Put this at the bottom */
+.card {
+    background: rgba(255, 255, 255, 0.05); 
+    backdrop-filter: blur(10px); 
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 20px;
+    transition: transform 0.3s ease;
+}/* CLASSIC 2025 RESET */
 * {
     margin: 0;
     padding: 0;
@@ -191,3 +214,19 @@ bento-item {
         grid-column: span 1 !important;
     }
 }
+.card {
+    background: rgba(255, 255, 255, 0.05); /* Very light transparent white */
+    backdrop-filter: blur(10px); /* This creates the frost effect */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px); /* Subtle lift on hover */
+    border: 1px solid rgba(0, 255, 200, 0.5); /* Glowing border hint */
+}
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #1a1a1a; }
+::-webkit-scrollbar-thumb { background: #00ffc8; border-radius: 10px; }

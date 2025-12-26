@@ -1,4 +1,5 @@
 //script.js
+ <script src="js/script.js"></script>
 const bcrypt = require('bcryptjs'); 
 const form = document.getElementById('laundry-form');
 async function placeOrder() {
@@ -12,6 +13,7 @@ async function placeOrder() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(orderData)
     });
+    
 
     const result = await response.json();
     if (result.status === "success") {
@@ -20,7 +22,9 @@ async function placeOrder() {
         alert("Error sending email.");
     }
 }
-
+console.log("%c STOP! %c You've found the secret console.", "color: red; font-size: 40px; font-weight: bold;", "color: green; font-size: 20px;");
+console.log("Looking for a Software Engineer? Let's talk: kelvinakun101@gmail.com");
+console.log("%c STOP! %c You found the secret console.", "color: red; font-size: 30px; font-weight: bold;", "color: #00ffc8; font-size: 15px;");
 
 async function placeOrder(event) {
     event.preventDefault(); // Prevents the page from refreshing
@@ -33,6 +37,10 @@ async function placeOrder(event) {
         email: customerEmail,
         order: laundryService
     };
+    // Runs when the page loads
+window.onload = () => {
+    console.log("Page loaded successfully!");
+};
 
     // 2. Send the data to your Flask Backend
     try {
