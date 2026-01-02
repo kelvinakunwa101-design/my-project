@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta property="og:image" content="images/og-preview.jpg">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kelvin Akunwa | Portfolio</title>
-    <!-- Use relative paths for CSS so GitHub Pages can find them -->
+    
     <link rel="stylesheet" href="style.css">
     <style>
-        /* Basic reset to ensure content is visible */
         body { font-family: sans-serif; margin: 0; padding: 0; color: #333; background: #fff; }
         .navbar { display: flex; justify-content: space-between; padding: 20px; background: #333; color: white; }
         .nav-links { list-style: none; display: flex; gap: 20px; }
@@ -32,14 +32,13 @@
     </header>
 
     <main>
-        <!-- Hero Section -->
         <section style="padding: 60px 20px; text-align: center;">
             <h1>Creative Design with <em>Intention</em></h1>
             <p>Building digital experiences that stand the test of time.</p>
             <a href="#contact" style="padding: 10px 20px; background: blue; color: white; text-decoration: none; border-radius: 5px;">Work With Me</a>
         </section>
 
-        <!-- Bento Grid Projects -->
+      
         <div class="bento-grid" id="projects">
             <div class="bento-item">
                 <span class="badge">Software Engineer</span>
@@ -56,7 +55,7 @@
             </div>
         </div>
 
-        <!-- Contact Form -->
+    
         <section id="contact" style="padding: 50px 20px; background: #f9f9f9;">
             <h2 style="text-align: center;">Get in Touch</h2>
             <form action="formspree.io" method="POST" style="max-width: 500px; margin: auto; display: flex; flex-direction: column; gap: 10px;">
@@ -78,7 +77,6 @@
     <div class="footer-bottom">
         <div class="footer-info">
             <p>&copy; 2026 Kelvin Akunwa</p>
-            <!-- This is where the dynamic time will appear -->
             <p id="local-time">Lagos, NG: 12:00 PM</p>
         </div>
         
@@ -90,7 +88,6 @@
     </div>
 </footer>
 <script>
-    // Smooth appearance when scrolling
     const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
             if (entry.isIntersecting) {
@@ -115,9 +112,8 @@
         timeElement.innerHTML = `Lagos, NG: ${lagosTime}`;
     }
 
-    // Update time every minute
     setInterval(updateTime, 60000);
-    updateTime(); // Initial call
+    updateTime(); 
 </script>
 </body>
 </html>
