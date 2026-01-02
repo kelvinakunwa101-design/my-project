@@ -58,7 +58,65 @@ body::before {
     0% { transform: translateX(0); }
     100% { transform: translateX(calc(-250px * 5)); }
 }
-
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5%;
+  background: #333;
+  color: white;
+  position: sticky;
+  top: 0;
+}
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  transition: color 0.3s;
+}
+.nav-links li a:hover {
+  color: #04AA6D; /* Highlight color */
+}
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+.project-card {
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  transition: transform 0.3s;
+}
+.project-card:hover {
+  transform: translateY(-10px); /* Lifts up on hover */
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+.form-group {
+  margin-bottom: 15px;
+}
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.cta-button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: bold;
+}
+.cta-button:hover {
+  background-color: #038d5a;
+}
 
 :root {
     --bg-dark: #0a0a0c;
