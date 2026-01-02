@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="google-site-verification" content="rmbpOhPt2R1m7H2E6bmY
+  <meta property="og:image" content="images/og-preview.jpg">
+    <title>Kelvin Akunwa | Portfolio</title>
+    
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body { font-family: sans-serif; margin: 0; padding: 0; color: #333; background: #fff; }
+        .navbar { display: flex; justify-content: space-between; padding: 20px; background: #333; color: white; }
+        .nav-links { list-style: none; display: flex; gap: 20px; }
+        .nav-links a { color: white; text-decoration: none; }
+        .bento-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; padding: 20px; }
+        .bento-item { border: 1px solid #ccc; padding: 20px; border-radius: 12px; }
+        footer { text-align: center; padding: 40px; background: #111; color: white; }
+    </style>
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">KELVIN AKUNWA</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="#projects">Work</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section style="padding: 60px 20px; text-align: center;">
+            <h1>Creative Design with <em>Intention</em></h1>
+            <p>Building digital experiences that stand the test of time.</p>
+            <a href="#contact" style="padding: 10px 20px; background: blue; color: white; text-decoration: none; border-radius: 5px;">Work With Me</a>
+        </section>
+
+      
+        <div class="bento-grid" id="projects">
+            <div class="bento-item">
+                <span class="badge">Software Engineer</span>
+                <h2>Kelvin Akunwa</h2>
+                <p>Building high-performance solutions with 2026 tech standards in Lagos, Nigeria.</p>
+            </div>
+            <div class="bento-item">
+                <h3>Latest Project</h3>
+                <p>Branding & UI Development</p>
+            </div>
+            <div class="bento-item">
+                <h3>Tech Stack</h3>
+                <p>JavaScript, GitHub, CSS3, Vercel</p>
+            </div>
+        </div>
+
+    
+        <section id="contact" style="padding: 50px 20px; background: #f9f9f9;">
+            <h2 style="text-align: center;">Get in Touch</h2>
+            <form action="formspree.io" method="POST" style="max-width: 500px; margin: auto; display: flex; flex-direction: column; gap: 10px;">
+                <input type="text" name="name" placeholder="Your Name" required style="padding: 10px;">
+                <input type="email" name="email" placeholder="kelvinakunwa101@gmail.com" required style="padding: 10px;">
+                <textarea name="message" placeholder="Your Message" rows="5" style="padding: 10px;"></textarea>
+                <button type="submit" style="padding: 10px; background: black; color: white; cursor: pointer;">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="modern-footer">
+    <div class="footer-cta">
+        <h2>Let's build something elite.</h2>
+        <p class="status-indicator"><span class="pulse-dot"></span> Available for Q1 2026 Projects</p>
+        <a href="mailto:kelvinakunwa101@gmail.com" class="cta-email">Start a Project</a>
+    </div>
+
+    <div class="footer-bottom">
+        <div class="footer-info">
+            <p>&copy; 2026 Kelvin Akunwa</p>
+            <p id="local-time">Lagos, NG: 12:00 PM</p>
+        </div>
+        
+        <div class="social-links">
+            <a href="linkedin.com" target="_blank">LinkedIn</a>
+            <a href="x.com" target="_blank">X (Twitter)</a>
+            <a href="github.com" target="_blank">GitHub</a>
+        </div>
+    </div>
+</footer>
+<script>
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('show');
+            }
+        });
+    });
+
+    const hiddenElements = document.querySelectorAll('.bento-item');
+    hiddenElements.forEach((el) => observer.observe(el));
+</script>
+<script>
+    function updateTime() {
+        const timeElement = document.getElementById('local-time');
+        const options = { 
+            timeZone: 'Africa/Lagos', 
+            hour: '2-digit', 
+            minute: '2-digit', 
+            hour12: true 
+        };
+        const lagosTime = new Intl.DateTimeFormat('en-US', options).format(new Date());
+        timeElement.innerHTML = `Lagos, NG: ${lagosTime}`;
+    }
+
+    setInterval(updateTime, 60000);
+    updateTime(); 
+</script>
+</body>
+</html>
