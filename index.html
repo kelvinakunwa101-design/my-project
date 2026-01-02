@@ -68,10 +68,56 @@
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2026 KELVIN AKUNWA. ALL RIGHTS RESERVED.</p>
-        <p>Available for new projects - Jan 2026</p>
-    </footer>
+    <footer class="modern-footer">
+    <div class="footer-cta">
+        <h2>Let's build something elite.</h2>
+        <p class="status-indicator"><span class="pulse-dot"></span> Available for Q1 2026 Projects</p>
+        <a href="mailto:kelvinakunwa101@gmail.com" class="cta-email">Start a Project</a>
+    </div>
 
+    <div class="footer-bottom">
+        <div class="footer-info">
+            <p>&copy; 2026 Kelvin Akunwa</p>
+            <!-- This is where the dynamic time will appear -->
+            <p id="local-time">Lagos, NG: 12:00 PM</p>
+        </div>
+        
+        <div class="social-links">
+            <a href="linkedin.com" target="_blank">LinkedIn</a>
+            <a href="x.com" target="_blank">X (Twitter)</a>
+            <a href="github.com" target="_blank">GitHub</a>
+        </div>
+    </div>
+</footer>
+<script>
+    // Smooth appearance when scrolling
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('show');
+            }
+        });
+    });
+
+    const hiddenElements = document.querySelectorAll('.bento-item');
+    hiddenElements.forEach((el) => observer.observe(el));
+</script>
+<script>
+    function updateTime() {
+        const timeElement = document.getElementById('local-time');
+        const options = { 
+            timeZone: 'Africa/Lagos', 
+            hour: '2-digit', 
+            minute: '2-digit', 
+            hour12: true 
+        };
+        const lagosTime = new Intl.DateTimeFormat('en-US', options).format(new Date());
+        timeElement.innerHTML = `Lagos, NG: ${lagosTime}`;
+    }
+
+    // Update time every minute
+    setInterval(updateTime, 60000);
+    updateTime(); // Initial call
+</script>
 </body>
 </html>
