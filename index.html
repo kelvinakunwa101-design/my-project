@@ -5,13 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kelvin Akunwa | Portfolio</title>
     <link rel="stylesheet" href="cdnjs.cloudflare.com">
+    <link rel="stylesheet" href="style.css">
     <style>
-        body { font-family: sans-serif; margin: 0; padding: 0; color: #333; background: #fff; scroll-behavior: smooth; }
+        body { font-family: sans-serif; margin: 0; padding: 0; background: #fff; scroll-behavior: smooth; }
         .navbar { display: flex; justify-content: space-between; padding: 20px; background: #333; color: white; position: sticky; top: 0; z-index: 1000; }
-        .nav-links { list-style: none; display: flex; gap: 20px; margin: 0; }
+        .nav-links { list-style: none; display: flex; gap: 20px; }
         .nav-links a { color: white; text-decoration: none; font-weight: bold; }
         .bento-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; padding: 20px; }
-        .bento-item { border: 1px solid #ccc; padding: 20px; border-radius: 12px; background: #fcfcfc; }
+        .bento-item { border: 1px solid #ccc; padding: 20px; border-radius: 12px; background: #fafafa; }
         footer { text-align: center; padding: 40px; background: #111; color: white; }
     </style>
 </head>
@@ -21,6 +22,7 @@
         <nav>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
                 <li><a href="#projects">Work</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -28,7 +30,7 @@
     </header>
 
     <main>
-        <section style="padding: 100px 20px; text-align: center;">
+        <section style="padding: 80px 20px; text-align: center;">
             <h1>Creative Design with <em>Intention</em></h1>
             <p>Building digital experiences in Lagos, Nigeria.</p>
         </section>
@@ -38,12 +40,12 @@
             <div class="bento-item"><h3>Tech Stack</h3><p>JavaScript, GitHub, CSS3, Vercel</p></div>
         </div>
 
-        <section id="contact" style="padding: 80px 20px; background: #f9f9f9;">
+        <section id="contact" style="padding: 60px 20px; background: #f4f4f4;">
             <h2 style="text-align: center;">Get in Touch</h2>
-            <form action="formspree.io" method="POST" style="max-width: 500px; margin: auto; display: flex; flex-direction: column; gap: 15px;">
-                <input type="text" name="name" placeholder="Your Name" required style="padding: 12px;">
-                <input type="email" name="email" placeholder="Your Email" required style="padding: 12px;">
-                <textarea name="message" placeholder="Your Message" rows="5" style="padding: 12px;"></textarea>
+            <form action="formspree.io" method="POST" style="max-width: 450px; margin: auto; display: flex; flex-direction: column; gap: 10px;">
+                <input type="text" name="name" placeholder="Name" required style="padding: 10px;">
+                <input type="email" name="email" placeholder="Email" required style="padding: 10px;">
+                <textarea name="message" placeholder="Message" rows="4" style="padding: 10px;"></textarea>
                 <button type="submit" style="padding: 12px; background: black; color: white; cursor: pointer;">Send Message</button>
             </form>
         </section>
@@ -53,8 +55,8 @@
         <p>&copy; 2026 Kelvin Akunwa | <span id="local-time">Lagos, NG: --:--</span></p>
     </footer>
 
-    <!-- WHATSAPP BUTTON: FIXED ONE SLASH SYNTAX -->
-    <a href="wa.me"/2348147058182
+    <!-- WHATSAPP BUTTON FIXED: Universal Link + Proper Quote Nesting -->
+    <a href="whatsapp://send?phone=2348147058182"
        target="_blank" 
        rel="noopener noreferrer"
        style="position:fixed;width:60px;height:60px;bottom:40px;right:40px;background-color:#25d366;color:#FFF;border-radius:50px;text-align:center;font-size:30px;box-shadow: 2px 2px 5px rgba(0,0,0,0.3);z-index:1000;">
