@@ -1,11 +1,12 @@
-//models/Order.js
+// models/Order.js
 const { client } = require('../db');
+const { ObjectId } = require('mongodb');
 
 const ordersCollection = client.db('mydatabase').collection('orders');
 
 async function createOrder(orderData) {
   const result = await ordersCollection.insertOne(orderData);
-  return result.insertedID;
+  return result.insertedId; 
 }
 
 async function readOrders() {
@@ -13,29 +14,20 @@ async function readOrders() {
 }
 
 async function updateOrder(id, newData) {
-  await ordersCollection.updateOne({ _id: id }, { $set: newData});
+  await ordersCollection.updateOne(
+    { _id: new ObjectId(id) },
+    { $set: newData }
+  );
 }
 
 async function deleteOrder(id) {
-  await ordersCollection.deleteOne({ _id: id });  
+  await ordersCollection.deleteOne({ _id: new ObjectId(id) });
 }
 
 
-Module.exports = { createOrder, readOrders, updateOrder, deleteOrder};
-return result.insertedId; 
-}
-async function readOrders() {
-  return await ordersCollection.find().toArray();
-}
-
-async function updateOrder(id, newData) {
-  await ordersCollection.updateOne({ _id: id }, { $set: newData});
-}
-
-async function deleteOrder(id) {
-  await ordersCollection.deleteOne({ _id: id });  
-}
-
-// FIXED: Must be lowercase 'module'
-module.exports = { createOrder, readOrders, updateOrder, deleteOrder };
-
+module.exports = {
+  createOrder,
+  readOrders,
+  updateOrder,
+  deleteOrder
+};
