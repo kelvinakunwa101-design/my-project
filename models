@@ -24,3 +24,18 @@ async function deleteOrder(id) {
 Module.exports = { createOrder, readOrders, updateOrder, deleteOrder};
 return result.insertedId; 
 }
+async function readOrders() {
+  return await ordersCollection.find().toArray();
+}
+
+async function updateOrder(id, newData) {
+  await ordersCollection.updateOne({ _id: id }, { $set: newData});
+}
+
+async function deleteOrder(id) {
+  await ordersCollection.deleteOne({ _id: id });  
+}
+
+// FIXED: Must be lowercase 'module'
+module.exports = { createOrder, readOrders, updateOrder, deleteOrder };
+
