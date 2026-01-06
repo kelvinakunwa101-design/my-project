@@ -2,7 +2,7 @@ const express = require('express');
 const path = require('path');
 const jwt = require('jsonwebtoken');
 const { connect, client } = require('./db');
-const { createorder, readOrders } = require('./models/Orders');
+const Posts = require('./models/Posts');
 const User = require('./models/User');
 const authMiddleware = require('./middleware/auth');
 const { sendSMS } = require('./twilio');
@@ -84,3 +84,4 @@ if (process.env.NODE_ENV !== 'production') {
 
 // CRITICAL FOR VERCEL
 module.exports = app;
+
