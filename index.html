@@ -1,86 +1,278 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script type="text/javascript">
+  <!-- Microsoft Clarity -->
+  <script>
     (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
     })(window, document, "clarity", "script", "uw7bsga7mf");
+  </script>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Kelvin Akunwa | Software Engineer</title>
+  <meta name="description" content="Modern software engineering, design, and scalable digital solutions built with intention." />
+
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #111111;
+      --muted: #555;
+      --card: #f7f7f7;
+      --border: #e5e5e5;
+    }
+
+    body.dark {
+      --bg: #0f0f0f;
+      --text: #ffffff;
+      --muted: #aaa;
+      --card: #1a1a1a;
+      --border: #333;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      scroll-behavior: smooth;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    /* HEADER */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      position: sticky;
+      top: 0;
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+      z-index: 1000;
+    }
+
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    .toggle {
+      cursor: pointer;
+      font-size: 1.2rem;
+      margin-left: 20px;
+    }
+
+    /* HERO */
+    .hero {
+      padding: 140px 20px;
+      text-align: center;
+      animation: fadeUp 1s ease;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      color: var(--muted);
+    }
+
+    /* SECTIONS */
+    section {
+      padding: 80px 40px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    /* GRID / CARDS */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 30px;
+      transition: transform 0.3s, box-shadow 0.3s;
+      animation: fadeUp 0.8s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+
+    /* PRICING */
+    .price {
+      font-size: 2rem;
+      font-weight: 700;
+      margin: 15px 0;
+    }
+
+    /* TESTIMONIALS */
+    .testimonial {
+      font-style: italic;
+      color: var(--muted);
+    }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 40px;
+      border-top: 1px solid var(--border);
+    }
+
+    /* WHATSAPP */
+    .whatsapp {
+      position: fixed;
+      bottom: 40px;
+      right: 40px;
+      width: 60px;
+      height: 60px;
+      background: #25d366;
+      color: #fff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      z-index: 1000;
+      text-decoration: none;
+    }
+
+    /* ANIMATION */
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <strong>KELVIN AKUNWA</strong>
+  <nav>
+    <a href="#services">Services</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#testimonials">Testimonials</a>
+    <span class="toggle" id="themeToggle">🌙</span>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>Software Built With Intention</h1>
+  <p>Modern engineering & design solutions from Lagos, Nigeria</p>
+</section>
+
+<section id="services">
+  <h2>Services</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Web Development</h3>
+      <p>Fast, scalable, modern websites and applications.</p>
+    </div>
+    <div class="card">
+      <h3>Backend & APIs</h3>
+      <p>Secure Node.js & MongoDB backend systems.</p>
+    </div>
+    <div class="card">
+      <h3>UI / UX Design</h3>
+      <p>Clean, intuitive, user-focused interfaces.</p>
+    </div>
+  </div>
+</section>
+
+<section id="pricing">
+  <h2>Pricing</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Starter</h3>
+      <p class="price">$300</p>
+      <p>Landing page or small business website</p>
+    </div>
+    <div class="card">
+      <h3>Professional</h3>
+      <p class="price">$800</p>
+      <p>Full website or web application</p>
+    </div>
+    <div class="card">
+      <h3>Enterprise</h3>
+      <p class="price">Custom</p>
+      <p>Advanced systems & integrations</p>
+    </div>
+  </div>
+</section>
+
+<section id="testimonials">
+  <h2>Testimonials</h2>
+  <div class="grid">
+    <div class="card testimonial">
+      “Kelvin delivered clean, professional work ahead of schedule.”
+    </div>
+    <div class="card testimonial">
+      “Reliable, skilled, and easy to work with.”
+    </div>
+    <div class="card testimonial">
+      “Exactly the quality our business needed.”
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2026 Kelvin Akunwa · Lagos, Nigeria</p>
+</footer>
+
+<a class="whatsapp" href="https://wa.me/2348147058182" target="_blank" rel="noopener">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<script>
+  const toggle = document.getElementById('themeToggle');
+  const body = document.body;
+
+  if (localStorage.getItem('theme') === 'dark') {
+    body.classList.add('dark');
+    toggle.textContent = '☀️';
+  }
+
+  toggle.addEventListener('click', () => {
+    body.classList.toggle('dark');
+    const isDark = body.classList.contains('dark');
+    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    toggle.textContent = isDark ? '☀️' : '🌙';
+  });
 </script>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kelvin Akunwa | Portfolio</title>
-    <link rel="stylesheet" href="cdnjs.cloudflare.com">
-    <link rel="stylesheet" href="style.css">
-    <style>
-        body { font-family: sans-serif; margin: 0; padding: 0; background: #fff; scroll-behavior: smooth; }
-        .navbar { display: flex; justify-content: space-between; padding: 20px; background: #333; color: white; position: sticky; top: 0; z-index: 1000; }
-        .nav-links { list-style: none; display: flex; gap: 20px; }
-        .nav-links a { color: white; text-decoration: none; font-weight: bold; }
-        .bento-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; padding: 20px; }
-        .bento-item { border: 1px solid #ccc; padding: 20px; border-radius: 12px; background: #fafafa; }
-        footer { text-align: center; padding: 40px; background: #111; color: white; }
-    </style>
-</head>
-<body>
-    <header class="navbar">
-        <div class="logo"><strong>KELVIN AKUNWA</strong></div>
-        <nav>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="#projects">Work</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        <section style="padding: 80px 20px; text-align: center;">
-            <h1>Creative Design with <em>Intention</em></h1>
-            <p>Building digital experiences in Lagos, Nigeria.</p>
-        </section>
-
-        <div class="bento-grid" id="projects">
-            <div class="bento-item"><h2>Software Engineer</h2><p>Kelvin Akunwa</p></div>
-            <div class="bento-item"><h3>Tech Stack</h3><p>JavaScript, GitHub, CSS3, Vercel</p></div>
-        </div>
-
-        <section id="contact" style="padding: 60px 20px; background: #f4f4f4;">
-            <h2 style="text-align: center;">Get in Touch</h2>
-            <form action="https://formspree.io/f/xbdlzrlk" method="POST" style="max-width: 450px; margin: auto; display: flex; flex-direction: column; gap: 10px;">
-                <input type="text" name="name" placeholder="Name" required style="padding: 10px;">
-                  <input type="email" name="email" placeholder="kelvinakunwa101@gmail.com" required>    
-                   <textarea name="message" placeholder="Message" rows="4" style="padding: 10px;"></textarea>
-                <button type="submit" style="padding: 12px; background: black; color: white; cursor: pointer;">Send Message</button>
-            </form>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2026 Kelvin Akunwa | <span id="local-time">Lagos, NG: --:--</span></p>
-    </footer>
-
-    <!-- WHATSAPP BUTTON FIXED: Universal Link + Proper Quote Nesting -->
-    <a href="wa.me://send?phone=2348147058182"
-       target="_blank" 
-       rel="noopener noreferrer"
-       style="position:fixed;width:60px;height:60px;bottom:40px;right:40px;background-color:#25d366;color:#FFF;border-radius:50px;text-align:center;font-size:30px;box-shadow: 2px 2px 5px rgba(0,0,0,0.3);z-index:1000;">
-       <i class="fab fa-whatsapp" style="margin-top:16px;"></i>
-    </a>
-
-    <script>
-        function updateTime() {
-            const timeElement = document.getElementById('local-time');
-            const options = { timeZone: 'Africa/Lagos', hour: '2-digit', minute: '2-digit', hour12: true };
-            timeElement.innerHTML = `Lagos, NG: ${new Intl.DateTimeFormat('en-US', options).format(new Date())}`;
-        }
-        setInterval(updateTime, 60000);
-        updateTime();
-    </script>
 </body>
 </html>
-
-
