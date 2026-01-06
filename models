@@ -20,4 +20,7 @@ async function deleteOrder(id) {
   await ordersCollection.deleteOne({ _id: id });  
 }
 
+
 Module.exports = { createOrder, readOrders, updateOrder, deleteOrder};
+return result.insertedId; 
+}
