@@ -24,7 +24,6 @@ const ordersRouter = require('./routes/orders');
 app.use('/api/posts', postsRouter);
 app.use('/api/users', usersRouter);
 app.use('/api/orders', ordersRouter);
-
 // 6. Frontend route
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'views', 'index.html'));
@@ -36,10 +35,7 @@ app.get('/health', (req, res) => {
 });
 
 // 8. Start server (local only)
-if (require.main === module) {
-  app.listen(port, () => {
-    console.log(`Server running on port ${port}`);
-  });
-}
+if (require.main === module) 
+  
 
 module.exports = app;
