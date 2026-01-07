@@ -6,27 +6,20 @@ const { check, validationResult } = require('express-validator');
 const User = require('../models/User');
 const auth = require('../middleware/auth');
 
-// @route   GET /auth
-// @desc    Get authenticated user
-// @access  Private
 router.get('/auth', auth, async (req, res) => {
   try {
     const user = await User.findById(req.user.id).select('-password');
     res.json(user);
   } catch (err) {
-    console.error(err.message);
     res.status(500).send('Server error');
   }
 });
 
-// @route   POST /login
-// @desc    Login user
-// @access  Public
 router.post(
   '/login',
   [
     check('email', 'Please include a valid email').isEmail(),
-    check('password', 'Password is required').exists(),
+    check('password', 'Password is required').exists()
   ],
   async (req, res) => {
     const errors = validationResult(req);
@@ -49,30 +42,25 @@ router.post(
 
       const payload = { user: { id: user.id } };
 
-      const token = jwt.sign(payload, process.env.JWT_SECRET, {
-        expiresIn: '1h',
-      });
+      const token = jwt.sign(
+        payload,
+        process.env.JWT_SECRET,
+        { expiresIn: '1h' }
+      );
 
       res.json({ token });
     } catch (err) {
-      console.error(err.message);
       res.status(500).send('Server error');
     }
   }
 );
 
-// @route   POST /register
-// @desc    Register user
-// @access  Public
 router.post(
   '/register',
   [
     check('name', 'Name is required').not().isEmpty(),
     check('email', 'Please include a valid email').isEmail(),
-    check(
-      'password',
-      'Please enter a password with at least 6 characters'
-    ).isLength({ min: 6 }),
+    check('password', 'Password must be 6+ chars').isLength({ min: 6 })
   ],
   async (req, res) => {
     const errors = validationResult(req);
@@ -92,18 +80,18 @@ router.post(
 
       const salt = await bcrypt.genSalt(10);
       user.password = await bcrypt.hash(password, salt);
-
       await user.save();
 
       const payload = { user: { id: user.id } };
 
-      const token = jwt.sign(payload, process.env.JWT_SECRET, {
-        expiresIn: '1h',
-      });
+      const token = jwt.sign(
+        payload,
+        process.env.JWT_SECRET,
+        { expiresIn: '1h' }
+      );
 
       res.json({ token });
     } catch (err) {
-      console.error(err.message);
       res.status(500).send('Server error');
     }
   }
