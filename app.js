@@ -2,12 +2,7 @@ console.log('APP.JS LOADED');
 const express = require('express');
 const path = require('path');
 
-const connectDB = require('./db');
-
-const app = express();
-
-// Connect to MongoDB (serverless-safe)
-connectDB();
+const connectDB = require('./lib/connectDB');
 
 app.use(express.json());
 app.use(express.static('public'));
