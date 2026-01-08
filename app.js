@@ -1,3 +1,4 @@
+console.log('APP.JS LOADED');
 const express = require('express');
 const path = require('path');
 
