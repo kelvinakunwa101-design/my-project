@@ -1,25 +1,19 @@
 const mongoose = require('mongoose');
 
-let cached = global.mongoose;
+const connectDB = async () => {
+  try {
+    if (!process.env.MONGO_URI) {
+      throw new Error('MONGO_URI is missing');
+    }
 
-if (!cached) {
-  cached = global.mongoose = { conn: null, promise: null };
-}
+    await mongoose.connect(process.env.MONGO_URI);
 
-async function connectDB() {
-  if (cached.conn) {
-    return cached.conn;
+    console.log('MongoDB connected successfully');
+  } catch (error) {
+    console.error('Database connection error:', error.message);
+    throw error; // VERY IMPORTANT for Vercel
   }
-
-  if (!cached.promise) {
-    cached.promise = mongoose.connect(process.env.MONGO_URI, {
-      bufferCommands: false,
-    }).then((mongoose) => mongoose);
-  }
-
-  cached.conn = await cached.promise;
-  return cached.conn;
-}
+};
 
 module.exports = connectDB;
 
