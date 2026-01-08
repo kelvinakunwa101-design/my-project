@@ -1,13 +1,14 @@
-console.log('APP.JS LOADED');
-
 const express = require('express');
 const path = require('path');
-const { connect } = require('./lib/connectDB');
+
+console.log('APP.JS LOADED');
+
+const connectDB = require('./db');
 
 const app = express();
 
-// Connect to MongoDB
-connect();
+// connect once (safe on Vercel)
+connectDB();
 
 app.use(express.json());
 app.use(express.static('public'));
