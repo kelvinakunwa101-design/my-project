@@ -7,6 +7,7 @@ async function connectDB() {
   if (!client) {
     client = new MongoClient(uri);
     await client.connect();
+    console.log('MongoDB connected');
   }
   return client;
 }
