@@ -1,29 +1,20 @@
-const express = require('express');
-const path = require('path');
-const connectDB = require('./db');
+require('dotenv').config();
 
-console.log('APP.JS LOADED');
+const express = require('express');
+const connectDB = require('./db');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
 
 connectDB()
-  .then(() => {
-    console.log('MongoDB connected');
-  })
-  .catch((err) => {
-    console.error('MongoDB connection failed:', err);
-  });
+  .then(() => console.log('MongoDB connected'))
+  .catch(err => console.error('MongoDB connection error:', err));
 
 
 app.use(express.json());
 app.use(express.static('public'));
 
-
-app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'index.html'));
-});
 
 app.get('/health', (req, res) => {
   res.json({ status: 'OK' });
@@ -33,4 +24,3 @@ app.get('/health', (req, res) => {
 app.listen(PORT, '0.0.0.0', () => {
   console.log(`Server running on port ${PORT}`);
 });
-
