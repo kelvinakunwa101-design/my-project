@@ -7,6 +7,7 @@ module.exports = async function handler(req, res) {
   }
 
   try {
+    await connectDB();
 
     const { name, email, message } = req.body || {};
 
@@ -14,10 +15,6 @@ module.exports = async function handler(req, res) {
       return res.status(400).json({ message: 'All fields are required' });
     }
 
-
-    await connectDB();
-
-    
     const newContact = await Contact.create({
       name,
       email,
@@ -26,15 +23,10 @@ module.exports = async function handler(req, res) {
 
     return res.status(201).json({
       success: true,
-      message: 'Message saved successfully',
       data: newContact,
     });
-
   } catch (error) {
     console.error('Contact API error:', error);
-    return res.status(500).json({
-      success: false,
-      message: 'Internal Server Error',
-    });
+    return res.status(500).json({ message: 'Server error' });
   }
 };
