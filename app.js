@@ -3,6 +3,7 @@ require('dotenv').config();
 const express = require('express');
 const path = require('path');
 const connectDB = require('./db');
+const contactRoute = require('./routes/contact'); 
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -14,6 +15,9 @@ connectDB()
 
 // Middleware
 app.use(express.json());
+
+// API routes
+app.use('/api/contact', contactRoute); 
 
 // Serve static files from root directory
 app.use(express.static(__dirname));
