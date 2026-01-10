@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Kelvin Akunwa | Software Engineer & Digital Solutions</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+
+<style>
+:root {
+  --bg:#ffffff;
+  --text:#0b0b0b;
+  --muted:#555;
+  --card:#f7f7f7;
+  --accent:#0a84ff;
+  --border:#e6e6e6;
+}
+body.dark {
+  --bg:#0f0f0f;
+  --text:#ffffff;
+  --muted:#aaa;
+  --card:#1a1a1a;
+  --border:#333;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  margin:0;
+  font-family:'Inter', sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  transition:.3s;
+}
+
+header {
+  position:sticky;
+  top:0;
+  z-index:1000;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 40px;
+  background:var(--bg);
+  border-bottom:1px solid var(--border);
+}
+
+nav a {
+  margin-left:20px;
+  text-decoration:none;
+  font-weight:600;
+  color:var(--text);
+}
+nav a:hover { color:var(--accent); }
+.toggle { cursor:pointer; margin-left:20px; }
+
+.hero {
+  padding:140px 20px 120px;
+  text-align:center;
+  max-width:900px;
+  margin:auto;
+}
+.hero h1 {
+  font-size:3.3rem;
+  font-weight:800;
+  margin-bottom:20px;
+}
+.hero p {
+  font-size:1.25rem;
+  color:var(--muted);
+  margin-bottom:40px;
+}
+.hero .actions a {
+  padding:16px 32px;
+  border-radius:40px;
+  margin:0 10px;
+  font-weight:700;
+  text-decoration:none;
+}
+.btn-primary { background:var(--accent); color:#fff; }
+.btn-secondary { border:1px solid var(--border); color:var(--text); }
+
+.trust {
+  display:flex;
+  justify-content:center;
+  gap:30px;
+  margin-top:50px;
+  color:var(--muted);
+  font-weight:600;
+}
+
+section {
+  padding:90px 40px;
+  max-width:1150px;
+  margin:auto;
+}
+
+h2 {
+  text-align:center;
+  font-size:2.4rem;
+  margin-bottom:50px;
+}
+
+.grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:28px;
+}
+
+.card {
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:18px;
+  padding:32px;
+  transition:.3s;
+}
+.card:hover {
+  transform:translateY(-6px);
+  box-shadow:0 20px 50px rgba(0,0,0,.12);
+}
+.card h3 { color:var(--accent); margin-bottom:10px; }
+
+.project {
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+.project span {
+  font-size:.85rem;
+  font-weight:700;
+  color:var(--accent);
+}
+
+.price {
+  font-size:2rem;
+  font-weight:800;
+  margin:10px 0;
+}
+
+form {
+  max-width:520px;
+  margin:auto;
+  display:grid;
+  gap:16px;
+}
+input, textarea {
+  padding:14px;
+  border-radius:10px;
+  border:1px solid var(--border);
+  font-family:inherit;
+}
+button {
+  padding:16px;
+  border:none;
+  border-radius:40px;
+  background:var(--accent);
+  color:#fff;
+  font-weight:700;
+  cursor:pointer;
+}
+
+footer {
+  text-align:center;
+  padding:50px;
+  border-top:1px solid var(--border);
+  color:var(--muted);
+}
+
+.whatsapp {
+  position:fixed;
+  bottom:32px;
+  right:32px;
+  width:60px;
+  height:60px;
+  background:#25d366;
+  color:white;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:28px;
+  text-decoration:none;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <strong>KELVIN AKUNWA</strong>
+  <nav>
+    <a href="./">Home</a>
+    <a href="#projects">Projects</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+    <span class="toggle" id="themeToggle">🌙</span>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>Building Digital Products That Scale</h1>
+  <p>I design and build fast, secure, production-ready websites and backend systems for businesses and startups.</p>
+  <div class="actions">
+    <a href="#contact" class="btn-primary">Start a Project</a>
+    <a href="#projects" class="btn-secondary">View Work</a>
+  </div>
+  <div class="trust">
+    <span>⚡ Fast Delivery</span>
+    <span>🔒 Secure Systems</span>
+    <span>🚀 Scalable Code</span>
+  </div>
+</section>
+
+<section id="projects">
+  <h2>Selected Projects</h2>
+  <div class="grid">
+    <div class="card project">
+      <span>Web Platform</span>
+      <h3>Laundry Management System</h3>
+      <p>Full-stack system with authentication, orders, and admin dashboard.</p>
+    </div>
+    <div class="card project">
+      <span>API & Backend</span>
+      <h3>REST API for Business Data</h3>
+      <p>Secure Node.js + MongoDB API with role-based access.</p>
+    </div>
+    <div class="card project">
+      <span>Website</span>
+      <h3>Business Portfolio Site</h3>
+      <p>High-conversion marketing website built for speed and clarity.</p>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <h2>Services</h2>
+  <div class="grid">
+    <div class="card"><h3>Web Development</h3><p>Modern, responsive, production-ready websites.</p></div>
+    <div class="card"><h3>Backend & APIs</h3><p>Node.js, MongoDB, authentication, payments.</p></div>
+    <div class="card"><h3>UI / UX</h3><p>Clean, intuitive interfaces that convert.</p></div>
+    <div class="card"><h3>Consulting</h3><p>Architecture, optimization, scaling advice.</p></div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Let’s Work Together</h2>
+  <form action="https://formspree.io/f/xbdlzrlk" method="POST">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="message" rows="5" placeholder="Tell me about your project" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+</section>
+
+<footer>
+  © 2026 Kelvin Akunwa · Lagos, Nigeria
+</footer>
+
+<a class="whatsapp" href="https://wa.me/2348147058182" target="_blank">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<script>
+const toggle = document.getElementById('themeToggle');
+if (localStorage.getItem('theme') === 'dark') {
+  document.body.classList.add('dark');
+  toggle.textContent = '☀️';
+}
+toggle.onclick = () => {
+  document.body.classList.toggle('dark');
+  const dark = document.body.classList.contains('dark');
+  localStorage.setItem('theme', dark ? 'dark' : 'light');
+  toggle.textContent = dark ? '☀️' : '🌙';
+};
+</script>
+
+</body>
+</html>
