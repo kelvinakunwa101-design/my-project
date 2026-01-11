@@ -27,8 +27,8 @@ body.dark {
   --border:#333;
 }
 
-* { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; }
 
 body {
   margin:0;
@@ -71,10 +71,10 @@ nav a:hover { color:var(--accent); }
   margin-bottom:20px;
 }
 .hero p {
-  font-size:1.2rem;
+  font-size:1.15rem;
   color:var(--muted);
   margin-bottom:40px;
-  line-height:1.6;
+  line-height:1.7;
 }
 .hero .actions a {
   padding:16px 34px;
@@ -127,6 +127,14 @@ h2 {
   box-shadow:0 18px 40px rgba(0,0,0,.12);
 }
 .card h3 { color:var(--accent); margin-bottom:10px; }
+
+.card a {
+  display:inline-block;
+  margin-top:10px;
+  font-weight:600;
+  color:var(--accent);
+  text-decoration:none;
+}
 
 form {
   max-width:520px;
@@ -181,9 +189,9 @@ footer {
 <header>
   <strong>KELVIN AKUNWA</strong>
   <nav>
-    <a href="/">Home</a>
+    <a href="#about">About</a>
     <a href="#projects">Projects</a>
-    <a href="#services">Skills</a>
+    <a href="#skills">Skills</a>
     <a href="#contact">Contact</a>
     <span class="toggle" id="themeToggle">🌙</span>
   </nav>
@@ -192,8 +200,8 @@ footer {
 <section class="hero">
   <h1>Full-Stack Software Engineer</h1>
   <p>
-    I design and build scalable web applications and APIs, focusing on clean architecture,
-    performance, and real-world problem solving.
+    I design and build reliable, scalable web applications and APIs with a strong
+    focus on clean architecture, performance, and real-world problem solving.
   </p>
   <div class="actions">
     <a href="#contact" class="btn-primary">Contact Me</a>
@@ -206,57 +214,60 @@ footer {
   </div>
 </section>
 
+<section id="about">
+  <h2>About Me</h2>
+  <p style="max-width:800px;margin:auto;text-align:center;color:var(--muted);line-height:1.7;">
+    I’m a full-stack software engineer with hands-on experience building real-world
+    applications using JavaScript, Node.js, and modern web tools. I enjoy solving
+    practical problems, learning continuously, and delivering clean, maintainable
+    solutions that scale.
+  </p>
+</section>
+
 <section id="projects">
   <h2>Selected Projects</h2>
   <div class="grid">
+
     <div class="card">
-      <h3>Laundry Management System (Case Study)</h3>
+      <h3>Laundry Management System</h3>
       <p>
-        A full-stack web application designed to manage customer orders, authentication,
-        and admin workflows with scalability and maintainability in mind.
+        A full-stack application for managing customer orders, authentication,
+        and admin workflows with a scalable backend architecture.
       </p>
-      <p><strong>Tech:</strong> Node.js, Express, MongoDB, REST APIs</p>
+      <p><strong>Tech:</strong> Node.js, Express, MongoDB</p>
+      <a href="#">View Case Study</a>
     </div>
 
     <div class="card">
       <h3>Business REST API</h3>
       <p>
-        Designed and implemented a secure RESTful API with validation, error handling,
-        and structured responses for business use cases.
+        Secure RESTful API with validation, error handling, and structured responses
+        for business use cases.
       </p>
       <p><strong>Tech:</strong> Node.js, Express, MongoDB</p>
+      <a href="#">View on GitHub</a>
     </div>
 
     <div class="card">
-      <h3>Personal Portfolio Website</h3>
+      <h3>Personal Portfolio</h3>
       <p>
-        A responsive, performance-focused portfolio website built to showcase projects,
-        technical skills, and deployment experience.
+        Responsive, performance-focused portfolio website showcasing projects,
+        skills, and deployment experience.
       </p>
       <p><strong>Tech:</strong> HTML, CSS, JavaScript, Vercel</p>
+      <a href="#">Live Demo</a>
     </div>
+
   </div>
 </section>
 
-<section id="services">
+<section id="skills">
   <h2>Technical Skills</h2>
   <div class="grid">
-    <div class="card">
-      <h3>Full-Stack Development</h3>
-      <p>Building end-to-end web applications with clean, maintainable code.</p>
-    </div>
-    <div class="card">
-      <h3>Backend & APIs</h3>
-      <p>REST API design, authentication, validation, and business logic.</p>
-    </div>
-    <div class="card">
-      <h3>Databases</h3>
-      <p>Schema design, data modeling, and MongoDB integration.</p>
-    </div>
-    <div class="card">
-      <h3>Deployment & Tooling</h3>
-      <p>Git, GitHub, Vercel, environment configuration.</p>
-    </div>
+    <div class="card"><h3>Frontend</h3><p>HTML, CSS, JavaScript, Responsive Design</p></div>
+    <div class="card"><h3>Backend</h3><p>Node.js, Express, REST APIs, Authentication</p></div>
+    <div class="card"><h3>Database</h3><p>MongoDB, Schema Design, Data Modeling</p></div>
+    <div class="card"><h3>Tooling</h3><p>Git, GitHub, Vercel, Environment Config</p></div>
   </div>
 </section>
 
@@ -274,7 +285,7 @@ footer {
   © 2026 Kelvin Akunwa · Lagos, Nigeria
 </footer>
 
-<a class="whatsapp" href="https://wa.me/2348147058182" target="_blank">
+<a class="whatsapp" href="https://wa.me/2348147058182" target="_blank" aria-label="WhatsApp">
   <i class="fab fa-whatsapp"></i>
 </a>
 
