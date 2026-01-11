@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 <title>Kelvin Akunwa | Full-Stack Software Engineer</title>
-<meta name="description" content="Kelvin Akunwa is a full-stack software engineer building scalable web applications and APIs using modern web technologies.">
+<meta name="description" content="Full-stack software engineer building scalable web applications and APIs using modern technologies.">
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
@@ -64,7 +64,13 @@ nav a:hover { color:var(--accent); }
   text-align:center;
   max-width:900px;
   margin:auto;
+  animation:fadeUp .8s ease;
 }
+@keyframes fadeUp {
+  from { opacity:0; transform:translateY(20px); }
+  to { opacity:1; transform:none; }
+}
+
 .hero h1 {
   font-size:clamp(2.4rem, 5vw, 3.4rem);
   font-weight:800;
@@ -76,6 +82,7 @@ nav a:hover { color:var(--accent); }
   margin-bottom:40px;
   line-height:1.7;
 }
+
 .hero .actions a {
   padding:16px 34px;
   border-radius:40px;
@@ -126,36 +133,14 @@ h2 {
   transform:translateY(-6px);
   box-shadow:0 18px 40px rgba(0,0,0,.12);
 }
+
 .card h3 { color:var(--accent); margin-bottom:10px; }
 
-.card a {
-  display:inline-block;
-  margin-top:10px;
+.links a {
+  margin-right:14px;
   font-weight:600;
   color:var(--accent);
   text-decoration:none;
-}
-
-form {
-  max-width:520px;
-  margin:auto;
-  display:grid;
-  gap:16px;
-}
-input, textarea {
-  padding:14px;
-  border-radius:10px;
-  border:1px solid var(--border);
-  font-family:inherit;
-}
-button {
-  padding:16px;
-  border:none;
-  border-radius:40px;
-  background:var(--accent);
-  color:#fff;
-  font-weight:700;
-  cursor:pointer;
 }
 
 footer {
@@ -163,7 +148,6 @@ footer {
   padding:50px 20px;
   border-top:1px solid var(--border);
   color:var(--muted);
-  font-size:.95rem;
 }
 
 .whatsapp {
@@ -189,7 +173,6 @@ footer {
 <header>
   <strong>KELVIN AKUNWA</strong>
   <nav>
-    <a href="#about">About</a>
     <a href="#projects">Projects</a>
     <a href="#skills">Skills</a>
     <a href="#contact">Contact</a>
@@ -200,28 +183,20 @@ footer {
 <section class="hero">
   <h1>Full-Stack Software Engineer</h1>
   <p>
-    I design and build reliable, scalable web applications and APIs with a strong
-    focus on clean architecture, performance, and real-world problem solving.
+    I design and build scalable, secure, production-ready web applications and APIs
+    focused on real-world problem solving.
   </p>
+
   <div class="actions">
     <a href="#contact" class="btn-primary">Contact Me</a>
     <a href="#projects" class="btn-secondary">View Projects</a>
   </div>
+
   <div class="trust">
-    <span>⚡ Production-Ready Code</span>
+    <span>⚡ Clean Architecture</span>
     <span>🔒 Secure APIs</span>
     <span>🚀 Scalable Systems</span>
   </div>
-</section>
-
-<section id="about">
-  <h2>About Me</h2>
-  <p style="max-width:800px;margin:auto;text-align:center;color:var(--muted);line-height:1.7;">
-    I’m a full-stack software engineer with hands-on experience building real-world
-    applications using JavaScript, Node.js, and modern web tools. I enjoy solving
-    practical problems, learning continuously, and delivering clean, maintainable
-    solutions that scale.
-  </p>
 </section>
 
 <section id="projects">
@@ -231,33 +206,37 @@ footer {
     <div class="card">
       <h3>Laundry Management System</h3>
       <p>
-        A full-stack application for managing customer orders, authentication,
-        and admin workflows with a scalable backend architecture.
+        Full-stack system with authentication, order tracking, and admin workflows
+        designed for scalability.
       </p>
       <p><strong>Tech:</strong> Node.js, Express, MongoDB</p>
-      <a href="#" target="_blank">Case Study</a> ·
-      <a href="#" target="_blank">GitHub</a>
+      <div class="links">
+        <a href="#">Case Study</a>
+        <a href="https://github.com/kelvinakunwa101" target="_blank">GitHub</a>
+      </div>
     </div>
 
     <div class="card">
       <h3>Business REST API</h3>
       <p>
-        Secure RESTful API with validation, error handling, and structured responses
-        for business use cases.
+        Secure REST API with validation, error handling, and clean architecture.
       </p>
       <p><strong>Tech:</strong> Node.js, Express, MongoDB</p>
-      <a href="#" target="_blank">GitHub</a>
+      <div class="links">
+        <a href="https://github.com/kelvinakunwa101" target="_blank">GitHub</a>
+      </div>
     </div>
 
     <div class="card">
       <h3>Personal Portfolio</h3>
       <p>
-        Responsive, performance-focused portfolio website showcasing projects,
-        skills, and deployment experience.
+        Responsive portfolio website showcasing projects, skills, and deployments.
       </p>
-      <p><strong>Tech:</strong> HTML, CSS, JavaScript, GitHub Pages</p>
-      <a href="https://kelvinakunwa101-design.github.io/my-project/" target="_blank">Live Site</a> ·
-      <a href="https://github.com/kelvinakunwa101-design/my-project" target="_blank">GitHub</a>
+      <p><strong>Tech:</strong> HTML, CSS, JavaScript</p>
+      <div class="links">
+        <a href="https://kelvinakunwa101-design.github.io/my-project/" target="_blank">Live Site</a>
+        <a href="https://github.com/kelvinakunwa101-design/my-project" target="_blank">GitHub</a>
+      </div>
     </div>
 
   </div>
@@ -267,14 +246,14 @@ footer {
   <h2>Technical Skills</h2>
   <div class="grid">
     <div class="card"><h3>Frontend</h3><p>HTML, CSS, JavaScript, Responsive Design</p></div>
-    <div class="card"><h3>Backend</h3><p>Node.js, Express, REST APIs, Authentication</p></div>
-    <div class="card"><h3>Database</h3><p>MongoDB, Schema Design, Data Modeling</p></div>
-    <div class="card"><h3>Tooling</h3><p>Git, GitHub, Vercel, Environment Config</p></div>
+    <div class="card"><h3>Backend</h3><p>Node.js, Express, REST APIs</p></div>
+    <div class="card"><h3>Database</h3><p>MongoDB, Data Modeling</p></div>
+    <div class="card"><h3>Tooling</h3><p>Git, GitHub, Vercel</p></div>
   </div>
 </section>
 
 <section id="contact">
-  <h2>Open to Roles, Internships & Collaborations</h2>
+  <h2>Let’s Work Together</h2>
   <form action="https://formspree.io/f/xbdlzrlk" method="POST">
     <input type="text" name="name" placeholder="Your Name" required>
     <input type="email" name="email" placeholder="Your Email" required>
@@ -287,7 +266,7 @@ footer {
   © 2026 Kelvin Akunwa · Lagos, Nigeria
 </footer>
 
-<a class="whatsapp" href="https://wa.me/2348147058182" target="_blank" aria-label="WhatsApp">
+<a class="whatsapp" href="https://wa.me/2348147058182" target="_blank">
   <i class="fab fa-whatsapp"></i>
 </a>
 
